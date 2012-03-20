@@ -44,7 +44,7 @@ end
 $output_dir = "#{Dir.getwd}/efoxout"
 $elasticfox_repo = 'https://github.com/bmaltby/elasticfox-ec2tag/zipball/tz'
 $repo_dir = "#{Dir.getwd}/elasticfox-ec2tag"
-$xulrunner = '/usr/bin/xulrunner'
+$xulrunner = '/usr/bin/xulrunner-1.9.2'
 
 rm_rf $output_dir
 rm_rf $repo_dir
