@@ -1648,6 +1648,7 @@ outer:
                 var keyFile = ec2ui_prefs.getSSHKeyTemplate();
                 keyFile = keyFile.replace(/\${keyname}/g, instance.keyName);
                 keyFile = keyFile.replace(/\${home}/g, home || "");
+                /* BMALTBY: Removed for more hard coded setup
                 if (!isWindows(navigator.platform)) {
                     keyFile = keyFile.replace(/\s/g, "\\ ");
                 }
@@ -1656,6 +1657,7 @@ outer:
                 if (!fileIn || !fileIn.exists()) {
                     keyFile = this.promptForKeyFile(instance.keyName);
                 }
+                */
 
                 argStr = argStr.replace(/\${key}/g, keyFile);
             }
