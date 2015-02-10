@@ -13,7 +13,7 @@
 
 require 'fileutils'
 require 'rubygems'
-require 'zip/zip'
+require 'zip'
 require 'net/http'
 
 require 'fileutils'
@@ -31,7 +31,7 @@ def web_get (uri, destination)
 end
 
 def unzip_file (file, destination)
-  Zip::ZipFile.open(file) do |zip_file|
+  Zip::File.open(file) do |zip_file|
     zip_file.each do |f|
       f_path=File.join(destination, f.name)
       FileUtils.mkdir_p(File.dirname(f_path))
@@ -93,8 +93,8 @@ file.puts <<EOS
 [App]
 Vendor=Amazon
 Name=Elasticfox-ec2tag
-Version=0.2.7-2
-BuildID=20080109
+Version=0.4.14
+BuildID=0.0.1.20070616
 Copyright=Copyright (c) 2007 Amazon
 ID=elasticfox@amazon.com
 [Gecko]
